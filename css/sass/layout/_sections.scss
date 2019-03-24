@@ -1,0 +1,71 @@
+/* SECTION STYLES */
+.solving {
+    background-image: url(../img/solving.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    padding: 60px;
+    margin-top: -3px;
+}
+.overlay {
+    background-color: rgba($white, .66);
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px auto;
+    display: flex;
+    
+    h2 {
+        margin-top: 0px;
+        position: relative;
+        width: auto;
+    }
+    p {
+        margin-top: 0px;
+    }
+}
+.clients-partnerships {
+    padding: 50px 0px 70px;
+}
+.research-section {
+    background-image: url(../img/research.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    padding: 60px;
+}
+.work-section {
+    background-image: url(../img/work.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    padding: 60px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 900px) {
+    .overlay {
+        display: block !important;
+        
+        h2 {
+            margin-bottom: 50px;
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .solving, .research-section, .work-section {
+        padding: 0px !important;
+    }
+    .solving {
+        margin-top: 0px;
+    }
+    .work-section {
+        margin-top: 30px;
+    }
+    .overlay {
+        padding: 40px 25px !important;
+    }
+}

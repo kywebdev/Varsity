@@ -1,0 +1,319 @@
+/* BLOCKS */
+.homepage-blocks {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+
+    a {
+        flex: 25%;
+        
+        &:hover {
+            &:before {
+                -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+            }
+        }
+        &:first-of-type {
+            flex: none;
+        }
+    }
+    .block {
+        flex: none;
+        width: 100%;
+        height: 100%;
+        
+        &.green {
+            flex: 25%;
+        }
+    }
+}
+.timeline-Tweet:hover {
+    background-color: transparent !important;
+}
+.block {
+    float: left;
+    padding: 50px 50px 30px;
+    position: relative;
+    flex: 1;
+    
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        right: 25px;
+        bottom: 25px;
+        border: 5px solid $white;
+    }
+    h3 {
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        width: 100%;
+        max-width: 250px;
+        position: relative;
+        margin-bottom: 30px;
+        
+        &:before {
+            content: "";
+            position: absolute;
+            width: 42%;
+            height: 2px;
+            bottom: -15px;
+            left: 0;
+            background-color: $white;
+            visibility: visible;
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    }
+    p {
+        color: $white;
+        font-weight: 600;
+    }
+    .fa {
+        color: $white;
+        font-size: 42px;
+    }
+}
+.green {
+    background-color: $green;
+}
+.teal {
+    background-color: $teal;
+}
+.brown {
+    background-color: $brown;
+}
+.orange {
+    background-color: $orange;
+}
+.olive {
+    background-color: $olive;
+}
+.light-teal {
+    background-color: $light-teal;
+}
+.mauve {
+    background-color: $mauve;
+}
+.client-logos {
+    margin-top: 50px;
+    
+    .logo-block {
+        width: 25%;
+        float: left;
+        margin-bottom: -4px;
+        position: relative;
+
+        &:nth-child(n+13) {
+            display: none;
+        }
+        &:hover {
+            .top {
+                opacity: 0;
+                top: -5px;
+            }
+            .bottom {
+                top: -5px;
+            }
+        }
+
+        .top {
+            position: absolute;
+            top: 0px;
+            z-index: 2;
+            opacity: 1;
+            transition: all .1s linear;
+        }
+        .bottom {
+            position: relative;
+            top: 0px;
+            transition: all .1s linear;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+.service-blocks {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    
+    &:hover {
+        a {
+            opacity: .65;
+            
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    a {
+        flex: 33%;
+        transition: all .3s linear;
+        
+        &:hover {
+            &:before {
+                -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+            }
+        }
+        &:nth-of-type(1) {
+            .block {
+                @extend .olive;
+            }
+        }
+        &:nth-of-type(2) {
+            .block {
+                @extend .teal;
+            }
+        }
+        &:nth-of-type(3) {
+            .block {
+                @extend .brown;
+            }
+        }
+    }
+    .block {
+        flex: none;
+        width: 100%;
+        height: 100%;
+        
+        .service-heading {
+            padding: 20px;
+            border: 3px solid $white;
+            margin-bottom: 20px;
+            
+            h3 {
+                font-family: $gotham-htf;
+                color: white;
+                font-size: 30px;
+                text-align: center;
+                max-width: none;
+                letter-spacing: 3px;
+                font-weight: 100;
+                margin: 0px;
+                
+                .left-dash {
+                    padding-right: 10px;
+                }
+                .right-dash {
+                    padding-left: 10px;
+                }
+                &:before {
+                    height: 0px;
+                }
+            }
+        }
+        h4 {
+            color: $white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            width: 100%;
+            max-width: 340px;
+            position: relative;
+            margin-bottom: 30px;
+            font-size: 29px;
+            font-weight: 400;
+            margin-top: 10px;
+            
+            &:before {
+                content: "";
+                position: absolute;
+                width: 30%;
+                height: 2px;
+                bottom: -15px;
+                left: 0;
+                background-color: $white;
+                visibility: visible;
+                -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+        }
+        p {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 32px;
+        }
+        img {
+            width: 100%;
+            max-width: 655px;
+            margin: 0px auto;
+            display: block;
+        }
+    }
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1100px) {
+    .homepage-blocks {
+        a {
+            flex: 50%;
+        }
+        .block {
+            &.green {
+                flex: 50%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1000px) {
+    .client-logos {
+        .logo-block {
+            width: 33%;
+        }
+    }
+    .service-blocks {
+        a {
+            flex: 50%;
+        }
+    }
+}
+@media screen and (max-width: 900px) {
+    .case-studies-container {
+        .case-study {
+            width: 50%;
+        }
+    }
+}
+@media screen and (max-width: 650px) {
+    .homepage-blocks {
+        a {
+            flex: 100%;
+        }
+        .block {
+            &.green {
+                flex: 100%;
+            }
+        }
+    }
+    .client-logos {
+        .logo-block {
+            width: 50%;
+        }
+    }
+    .service-blocks {
+        a {
+            flex: 100%;
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .case-studies-container {
+        .case-study {
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    .client-logos {
+        .logo-block {
+            width: 100%;
+        }
+    }
+}

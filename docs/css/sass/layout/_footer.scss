@@ -1,0 +1,84 @@
+/* FOOTER */
+footer {
+    background-image: url(../img/stripes.jpg);
+    padding: 50px 0px 30px;
+    position: relative;
+    z-index: 1;
+    
+    h2 {
+        color: $white;
+        width: 100%;
+        max-width: 330px;
+        margin-bottom: 40px;
+        
+        &:before {
+            background-color: $white;
+        }
+    }
+    p {
+        color: $white;
+        width: 100%;
+        max-width: 270px;
+    }
+    .learn-more {
+        width: 25%;
+        margin-right: 5%;
+        float: left;
+        position: relative;
+        z-index: 1;
+        
+        .social {
+            margin-left: -40px;
+            
+            li {
+                list-style-type: none;
+                display: inline-block;
+                margin-right: 15px;
+                position: relative;
+                top: 0px;
+                transition: all .1s linear;
+                
+                &:hover {
+                    top: -5px;
+                }
+                a {
+                    color: $white;
+                    font-size: 50px;
+                    
+                    &:hover {
+                        &:before {
+                            -webkit-transform: scaleX(0);
+                            transform: scaleX(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .copyright {
+        margin-top: 30px;
+        font-size: 14px;
+    }
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1050px) {
+    footer {
+        padding: 10px 0px 30px;
+        
+        .learn-more {
+            width: 100%;
+        }
+        .contact-form {
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 430px) {
+    .contact-form {
+        label[for="mailing-list"] {
+            font-size: 13px;
+            top: -28px;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+/* TYPOGRAPHY */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,800,800i');
+@font-face {
+	font-family: 'Gotham HTF';
+	src: url('../fonts/GothamHTF-MediumCondensed.eot');
+	src: url('../fonts/GothamHTF-MediumCondensed.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamHTF-MediumCondensed.woff') format('woff'),
+		url('../fonts/GothamHTF-MediumCondensed.ttf') format('truetype'),
+		url('../fonts/GothamHTF-MediumCondensed.svg#GothamHTF-MediumCondensed') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+body {
+  font-family: $open-sans;
+  font-size: $body-font-size;
+}
+
+h1 {
+    font-family: $open-sans;
+    font-size: $heading-font-size;
+    font-weight: 300;
+    color: $white;
+    text-transform: uppercase;
+    margin: 140px 0px 50px;
+    letter-spacing: 5px;
+    
+    .heading-line {
+        color: $white;
+    }
+}
+.home {
+    h1 {
+        margin: 50px 0px;
+        color: $white;
+    }
+}
+h2 {
+    font-family: $open-sans;
+    font-size: 30px;
+    font-weight: 600;
+    color: $dark-blue;
+    line-height: 36px;
+    letter-spacing: 2px;
+    position: relative;
+    width: 330px;
+}
+h3 {
+    font-family: $open-sans;
+    font-size: 24px;
+    font-weight: 600;
+    color: $dark-blue;
+}
+h4, h5, h6 {
+    color: $dark-blue;
+}
+p {
+    color: $black;
+    line-height: 24px;
+}
+.sub-page-heading {
+    font-size: 22px;
+    text-transform: none;
+    letter-spacing: 2px;
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 730px) {
+    h1 {
+        font-size: 55px;
+        margin: 100px 0px 50px;
+    }
+    p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 34px;
+        margin: 40px 0px 30px;
+    }
+    .home {
+        h1 {
+            margin: 80px 0px 60px;
+        }
+    }
+    .sub-page {
+        margin-top: 20px;
+    }
+}

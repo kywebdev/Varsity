@@ -1,0 +1,82 @@
+/*
+ *	Sass Start - Base for getting started with Sass
+ *	--------------------------------------------------
+ *	CSS generated with Sass. Only edit the Sass files.
+ * --------------------------------------------------
+ * Need help organizing with Sass? Try https://sass-guidelin.es/
+ or the official docs http://www.sass-lang.com/documentation/file.SASS_REFERENCE.html
+ */
+@charset 'utf-8';
+
+
+/*
+ * SASS EXTENSIONS
+ * --------------------------------------------------
+ */
+
+  // Susy Grid System - http://susydocs.oddbird.net/en/latest/
+  @import 'susy';
+
+  // Breakpoint Media Queries - http://breakpoint-sass.com/
+  @import 'breakpoint';
+
+
+
+ /*
+  * NORMALIZE.CSS
+  * We use Normalize to fix discrepancies across browsers/devices. Include this before our styles
+ --------------------------------------------------
+  */
+  @import 'vendor/normalize';
+
+
+ /*
+  * UTILITIES
+  * These are variables/mixins/etc. used throughout the styles; they need to be includued first so that they can be used.
+ --------------------------------------------------
+  */
+  @import 'utilities/mixins';
+  @import 'utilities/variables';
+  @import 'utilities/helpers';
+
+/*
+ * BASE
+ * These are the global base styles used across the site. Think text, forms, buttons, blockquotes, lists, etc. etc.
+--------------------------------------------------
+ */
+  @import 'base/global';
+  @import 'base/typography';
+  @import 'base/buttons';
+  @import 'base/forms';
+  @import 'base/media'; // images, videos, etc.
+
+
+/*
+ * COMPONENTS
+ * Break all your specific elements into components (or "widgets" or "modules" or whatever your preferred term). Think navigation menus, heros, photo galleries, callouts, sliders, article lists, etc. etc.
+--------------------------------------------------
+ */
+  @import 'components/blocks';
+  @import 'components/team';
+  @import 'components/videos';
+  @import 'components/case-studies';
+
+
+/*
+ * LAYOUT
+ * Layout is for page/template specific styling.
+ * Example: the Homepage needs specially styled differently than normal pages
+--------------------------------------------------
+ */
+  @import 'layout/header';
+  @import 'layout/sections';
+  @import 'layout/footer';
+  @import 'layout/blog';
+
+
+  /*
+   * VENDOR
+   * If you need to use third-party styling, you can put their CSS files here and/or make files to overwrite any third-party CSS you have (such as WordPress plugins styling)
+  --------------------------------------------------
+   */
+   //@import 'vendor/YOURVENDOR';

@@ -1,0 +1,48 @@
+// Clearfix
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+
+// Visually hide; available to screen readers
+%visuallyhidden {
+	border: 0; clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+
+// Alignment
+.center-txt {
+    text-align: center;
+}
+.center {
+    margin: 0px auto;
+}
+
+// Text Treatment
+.font-light {
+    font-weight: 300 !important;
+}
+.font-normal {
+    font-weight: 400 !important;
+}
+.font-bold {
+    font-weight: 600 !important;
+}
+.italic {
+    font-style: italic !important;
+}
+.underline {
+    text-decoration: underline;
+}
