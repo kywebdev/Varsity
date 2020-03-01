@@ -5,7 +5,7 @@
     flex-wrap: wrap;
 
     a {
-        flex: 25%;
+        width: 25%;
         
         &:hover {
             &:before {
@@ -13,18 +13,11 @@
                 transform: scaleX(0);
             }
         }
-        &:first-of-type {
-            flex: none;
-        }
     }
     .block {
         flex: none;
         width: 100%;
         height: 100%;
-        
-        &.green {
-            flex: 25%;
-        }
     }
 }
 .timeline-Tweet:hover {
@@ -253,12 +246,7 @@
 @media screen and (max-width: 1100px) {
     .homepage-blocks {
         a {
-            flex: 50%;
-        }
-        .block {
-            &.green {
-                flex: 50%;
-            }
+            width: 50%;
         }
     }
 }
@@ -284,12 +272,7 @@
 @media screen and (max-width: 650px) {
     .homepage-blocks {
         a {
-            flex: 100%;
-        }
-        .block {
-            &.green {
-                flex: 100%;
-            }
+            width: 100%;
         }
     }
     .client-logos {
